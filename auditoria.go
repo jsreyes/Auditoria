@@ -1,4 +1,4 @@
-package main
+package Auditoria
 
 import (
 	//Se importan las librerias necesarias para que el Elastic funcione
@@ -36,14 +36,14 @@ import (
 // 	logrus.AddHook(hook)
 // }
 
-	//Se crea un bucle for, teniendo en cuenta el tick que se realiza al principio, y muestra la fecha y la hora actual
-	func insertar_elastic(usuario string, peticion string){
-		now := time.Now().String()
-		logrus.WithFields(logrus.Fields{
-			"Fecha_operacion": now,
-			"Usuario": "prueba",
-			"Ip": "10.20.0.256",
-			"Valor": "test",
-			"Petición": "GET",
-		}).Info("Now!")
-	}
+//Se crea un bucle for, teniendo en cuenta el tick que se realiza al principio, y muestra la fecha y la hora actual
+func insertar_elastic2(usuario string, peticion string) {
+	now := time.Now().String()
+	logrus.WithFields(logrus.Fields{
+		"Fecha_operacion": now,
+		"Usuario":         "prueba",
+		"Ip":              "10.20.0.256",
+		"Valor":           "test",
+		"Petición":        "GET",
+	}).Info("Now!")
+}
