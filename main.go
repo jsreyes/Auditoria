@@ -1,4 +1,4 @@
-package Auditoria
+package main
 
 import (
 	"fmt"
@@ -34,7 +34,7 @@ func main() {
 
 func consumirCola(nombreCola string) <-chan amqp.Delivery {
 
-	var uri = "amqp://admin:admin@localhost:5672/"
+	var uri = "amqp://guest:guest@10.20.0.175:5672/"
 	//var channel =  "auditoria"
 
 	con, err := amqp.Dial(uri)
@@ -78,7 +78,7 @@ func consumirCola(nombreCola string) <-chan amqp.Delivery {
 }
 
 func ConsumeQueue(queuename string) <-chan amqp.Delivery {
-	var uri = "amqp://admin:admin@localhost:5672/"
+	var uri = "amqp://guest:guest@10.20.0.175:5672/"
 	//var channel =  "auditoria"
 
 	con, err := amqp.Dial(uri)
